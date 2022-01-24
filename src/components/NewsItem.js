@@ -12,7 +12,7 @@ class NewsItem extends Component {
         let { title, description, imageUrl, newsUrl } = this.props;
         return (
             <Box boxShadow='2xl' rounded='md' border='1px' borderColor='gray.200' width='450px' height='auto'>
-                <Image src={imageUrl} alt="Image" width='auto-fit' />
+                <Image src={imageUrl} alt="Image" width='auto-fit' height='300px' />
                 <Box p='6'>
                     <Box mt='1' fontWeight='semibold' fontSize='xl' lineHeight='tight' isTruncated>
                         {title}...
@@ -22,7 +22,7 @@ class NewsItem extends Component {
                     </Box>
                     <br />
                     <Button colorScheme='blue'>
-                        <Link href={newsUrl}>Read more</Link>
+                        <Link href={newsUrl} target="_blank">Read more</Link>
                     </Button>
                 </Box>
             </Box>
