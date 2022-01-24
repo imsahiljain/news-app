@@ -3,15 +3,10 @@ import {
     SimpleGrid,
     Heading,
     Button,
-    Container 
+    Container
 } from '@chakra-ui/react'
 import NewsItem from './NewsItem';
 import "../assets/css/News.css";
-import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-} from "react-router-dom";
 
 class News extends Component {
     static defaultProps = {
@@ -65,7 +60,7 @@ class News extends Component {
                 <SimpleGrid columns={3} spacing={10} m='150' >
                     {this.state.articles.map((element) => {
                         return (
-                            <NewsItem key={element.url} title={element.title.slice(0, 45)} description={element.description.slice(0, 88)} imageUrl={element.urlToImage} newsUrl={element.url} />
+                            <NewsItem key={element.url} title={element.title ? element.title : ""} description={element.description ? element.description : ""} imageUrl={element.urlToImage} newsUrl={element.url} />
                         )
                     })}
                 </SimpleGrid>
@@ -78,7 +73,7 @@ class News extends Component {
                     <Button colorScheme='blue' variant='solid' onClick={this.handleNextClick}>
                         Next
                     </Button>
-                    
+
                 </Container>
 
 
