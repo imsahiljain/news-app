@@ -19,7 +19,30 @@ const Navbar = () => {
 
     return (
         <>
-            
+            <Flex boxShadow='md' rounded='md'>
+                <Box p='2' m='4'>
+                    <Heading fontFamily="Inter" fontSize='2xl'>News App</Heading>
+                </Box>
+                <Spacer />
+                <Box m='5'>
+                    <Button mr='4' colorScheme='black' variant='ghost'>
+                        <Link>Sports</Link>
+                    </Button>
+                    <Button mr='4' colorScheme='black' variant='ghost'>
+                        <Link>Tech</Link>
+                    </Button>
+                    <Button mr='4' colorScheme='black' variant='ghost'>
+                        <Link>Business</Link>
+                    </Button>
+                    <Button mr='4' colorScheme='black' variant='ghost'>
+                        <Link>Entertainment</Link>
+                    </Button>
+
+                    <IconButton mr='4' aria-label="Toggle Mode" onClick={toggleColorMode}>
+                        {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+                    </IconButton>
+                </Box>
+            </Flex>
         </>
     );
 };
