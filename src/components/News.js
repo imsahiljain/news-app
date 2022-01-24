@@ -16,7 +16,15 @@ class News extends Component {
         }
     }
 
-   
+    async componentDidMount() {
+        const url = "https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=280fa0816b344dae8da567443c8180b6"
+        const jsonData = await fetch(url)
+        const parseData = await jsonData.json()
+        this.setState({
+            articles: parseData.articles
+        })
+    }
+    
     render() {
         return (
             <>
