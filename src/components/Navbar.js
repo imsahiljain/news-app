@@ -13,15 +13,16 @@ import {
     SunIcon
 } from '@chakra-ui/icons';
 import { IconButton } from '@chakra-ui/button'
+import "../assets/css/News.css";
 
 const Navbar = () => {
     const { colorMode, toggleColorMode } = useColorMode()
 
     return (
         <>
-            <Flex boxShadow='md' rounded='md'>
+            <Flex boxShadow='md' rounded='md' mb='20'>
                 <Box p='2' m='4'>
-                    <Heading fontFamily="Inter" fontSize='2xl'>News App</Heading>
+                    <Heading className='newsHeading' fontFamily="Inter" fontSize='2xl'>News App</Heading>
                 </Box>
                 <Spacer />
                 <Box m='5'>
