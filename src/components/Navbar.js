@@ -20,7 +20,7 @@ const Navbar = () => {
 
     return (
         <>
-            <Flex boxShadow='md' rounded='md' mb='20'>
+            <Flex boxShadow='md'>
                 <Box p='2' m='4'>
                     <Heading className='newsHeading' fontFamily="Inter" fontSize='2xl'>News App</Heading>
                 </Box>
@@ -30,7 +30,7 @@ const Navbar = () => {
                         <Link>Sports</Link>
                     </Button>
                     <Button mr='4' colorScheme='black' variant='ghost'>
-                        <Link>Tech</Link>
+                        <Link>Technology</Link>
                     </Button>
                     <Button mr='4' colorScheme='black' variant='ghost'>
                         <Link>Business</Link>
